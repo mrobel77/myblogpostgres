@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" xmlns:th=" http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+	crossorigin="anonymous">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/style1.css}">
+
+<script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<title th:text="${title}">Hello, world!</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-custom py-1.5 navbar-expand-lg fixed-top text-uppercase">
+		<div class="container">
+			<img style="width:70px;" src="" th:src="@{/image/home.png}"th:href="@{/}" alt=""/>
+			<a class="navbar-brand font-weight-bold"  href="#"></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav ms-auto">
+					<a class="nav-link active px-lg-4 rounded" th:href="@{/}">Home</a> </span><a
+						class="nav-link px-lg-4 rounded" th:href="@{/user/index/}">LogIn</a>
+						 <a class="nav-link px-lg-4 rounded" th:href="@{/signup/}">SingUp</a> 
+						 <a class="nav-link px-lg-4 rounded"  th:text="${name}" th:href="@{/user/blog/0}">Blog</a>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+	<!-- close sidebar menu -->
+				
+				
+	
+				<div class="sidebar">
+					<span onclick="toggleSidebar()" class="crossBtn">&times;</span>
+						<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
+					
+						<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
+					
+						<a class="scroll-link" href="#section-2" th:href="@{/user/addblog}"><i class="fas fa-user"></i> Add Post</a>
+					
+						<a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
+					
+						<a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
+														
+						<div class="divider"></div>
+						
+				
+				</div>
+				
+				
+				<!-- End sidebar -->
+					
+						<!-- main section start -->
+						<div class="content">
+							<i onclick="toggleSidebar()"class="fas fa-bars m-3"> </i>
+								<div th:replace ="${content}">  </div>
+						</div>
+	 
+	 
+	<!-- section for contact -->
+	<section class="contact py-5">
+		<div class="container py-5">
+			<h1 class="text-center" data-aos="fade-up" data-aos-duration="1000">Contact
+				Me.</h1>
+			<div class="row py-5">
+				<div class="col-lg-10 mx-auto">
+					<div class="row text-center ">
+						<div class="col-lg-4 " data-aos="fade-right"
+							data-aos-duration="1000">
+							<div class="circle mx-auto">
+								<span><i class="fas fa-paper-plane"></i></span>
+							</div>
+							<h5>Address</h5>
+							<p>House No#66 UttorBadda Dhaka Bangladesh</p>
+						</div>
+						<div class="col-lg-4" data-aos="flip-up" data-aos-duration="1000">
+							<div class="circle mx-auto">
+								<span><i class="fas fa-envelope"></i></span>
+							</div>
+							<h5>Email</h5>
+							<p>mrobel@gmail.com</p>
+						</div>
+						<div class="col-lg-4" data-aos="fade-left"
+							data-aos-duration="1000">
+							<div class="circle mx-auto ">
+								<span><i class="fas fa-phone-alt"></i></span>
+							</div>
+							<h5>Phone</h5>
+							<p>01924430377</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			</div>
+	
+			<div class="row">
+				<div class="col-lg-9 mx-auto">
+					<form action="">
+						<div class="row">
+							<div class="col-lg-6" data-aos="fade-left"
+								data-aos-duration="1000">
+								<input type="text" class="form-control bg-light mb-3"
+									placeholder="Name">
+							</div>
+							<div class="col-lg-6" data-aos="fade-right"
+								data-aos-duration="1000">
+								<input type="text" class="form-control bg-light mb-3"
+									placeholder="Email">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="col-lg-12" data-aos="fade-up"
+								data-aos-duration="1000">
+								<textarea name="" id="" class="form-control bg-light"
+									placeholder="Massage" cols="30" rows="10"></textarea>
+							</div>
+						</div>
+						<button class="btn3 my-4">Submit</button>
+					</form>
+				</div>
+			</div>
+		
+	</section>
+
+	<!--  fotter section  -->
+	<footer class="py-3 text-center" th:fragment="footer1">
+		<p>Copy Right 2021 @ By Mohammad Ullah</p>
+	</footer>
+
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+		crossorigin="anonymous"></script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	
+	<script>
+	function deleteBLog(cid)
+	{
+		swal({
+			  title: "Are you sure?",
+			  text: "Once deleted, you will not be able to recover this file!",
+			  icon: "warning",
+			  buttons: true,
+			  dangerMode: true,
+			})
+			.then((willDelete) => {
+			  if (willDelete) {
+				window.location="/user/delete/"+cid;
+			  } else {
+			    swal("Your Post is safe!");
+			  }
+			});
+	}
+	
+	</script>
+
+</body>
+</html>
