@@ -1,11 +1,15 @@
-*{
+*{ 
+	
     padding: 0;
     margin: 0;
     box-sizing:border-box;
 }
 
+body {
+  padding-top: 75px;
+}
 .navbar-custom {
-    background-color: rgb(233,20,109) ;
+    background-color: rgb(64, 0, 128);
 }
 .nav-link{
     color: black;
@@ -40,13 +44,13 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     line-height: 1;
-    border-bottom: 3px solid rgb(233,20,109);
+    border-bottom: 3px solid rgb(64, 0, 128);
     width: 40%
 }
 .main .bt1{
    height:55px ;
    width: 138px;
-   background-color: rgb(233,20,109) ;
+   background-color: rgb(64, 0, 128) ;
    color: white;
    outline: none;
    border: none;
@@ -62,14 +66,14 @@
     height:55px ;
     width: 138px;
     background-color: transparent ;
-    color: rgb(233,20,109);
+    color: rgb(64, 0, 128);
     outline: none;
-    border: 1px solid rgb(233,20,109);
+    border: 1px solid rgb(64, 0, 128);
     font-weight: bold;
     border-radius: 5px;
  }
  .main .bt2:hover{
-    background-color: rgb(192, 14, 88) ;
+    background-color: rgb(64, 0, 64) ;
     transition: 0.5s;
     color: white;
 }

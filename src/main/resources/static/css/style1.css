@@ -4,10 +4,11 @@
 .sidebar {
 	
 	width: 18%; 
-	background:#ff0080;
+	background:rgb(64, 0, 128);
 	height: 100vh;
 	position: fixed;
 	padding-top: 45px;
+	margin-top: 40px;
 }
 @media only screen and(max-width:600px)
 {
@@ -19,6 +20,7 @@
 	height: 100vh;
 	position: fixed;
 	padding-top: 20px;
+	margin-top: 10px;
     }
 }
 .sidebar a { 
@@ -49,5 +51,7 @@
 
 .content {
 	margin-left:20%;
+
+	
 	
 	}

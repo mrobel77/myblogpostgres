@@ -37,7 +37,7 @@
 								<!--  -->
         	 		      <div class="form-group mt-3">
         	 		      
-        	 		      		<textarea name="blogPost" id="mytextarea" rows="40" placeholder="Enter your post" class="form-control"></textarea>
+        	 		      		<textarea name="blogPost" id="mytextarea" rows="10" placeholder="Enter your post" class="form-control"></textarea>
         	 		      </div>
         	 		             <!--blog image  -->
         	 		             
@@ -57,33 +57,15 @@
      </div> 
      <!-- ckeditor -->
      	
-     <script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+    
 	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-	<!-- <script>
+	<script>
       tinymce.init({
         selector: '#mytextarea'
       });
-    </script> -->
-    <script>
-    ClassicEditor
-    .create( document.querySelector( '#mytextarea' ), {
-        toolbar: [ 'heading', '|', 'bold', 'italic','underline', 'link', 'bulletedList', 'numberedList', 'blockQuote','undo', 'redo',
-    		'outdent', 'indent' ],
-        heading: {
-            options: [
-                { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-                { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
-                { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
-            ]
-        }
-    } )
-    .catch( error => {
-        console.log( error );
-    } );
-    
-    
     </script>
+  
 </section>
 
 </body>

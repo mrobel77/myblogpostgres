@@ -28,7 +28,7 @@ public class AdminController {
 		List<Blogs> list = this.blogRepository.findAll();
 		m.addAttribute("title", "Dash board");
 		m.addAttribute("list",list);
-		return "normal/user_dashboard";
+		return "admin/user_dashboard";
 	}
 	
 	//delalet blogs
@@ -39,7 +39,7 @@ public class AdminController {
 			Blogs blogs = optionalBlog.get();
 			this.blogRepository.delete(blogs);
 				
-			return "redirect:/user/index";
+			return "redirect:/admin/index";
 			
 		}
 

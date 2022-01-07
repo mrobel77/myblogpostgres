@@ -35,7 +35,7 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav ms-auto">
 					<a class="nav-link active px-lg-4 rounded" th:href="@{/}">Home</a> </span><a
-						class="nav-link px-lg-4 rounded" th:href="@{/user/index/}">LogIn</a>
+						class="nav-link px-lg-4 rounded" th:href="@{/user/addblog/}">DashBoard</a>
 						 <a class="nav-link px-lg-4 rounded" th:href="@{/signup/}">SingUp</a> 
 						 <a class="nav-link px-lg-4 rounded"  th:text="${name}" th:href="@{/user/blog/0}">Blog</a>
 				</div>
@@ -47,7 +47,7 @@
 				
 				
 	
-				<div class="sidebar">
+				<div class="sidebar ">
 					<span onclick="toggleSidebar()" class="crossBtn">&times;</span>
 						<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
 					
@@ -68,7 +68,7 @@
 				<!-- End sidebar -->
 					
 						<!-- main section start -->
-						<div class="content">
+						<div class="content py-5 mt-8">
 							<i onclick="toggleSidebar()"class="fas fa-bars m-3"> </i>
 								<div th:replace ="${content}">  </div>
 						</div>
@@ -110,35 +110,34 @@
 				</div>
 
 			</div>
-			</div>
-	
-			<div class="row">
-				<div class="col-lg-9 mx-auto">
-					<form action="">
-						<div class="row">
-							<div class="col-lg-6" data-aos="fade-left"
-								data-aos-duration="1000">
-								<input type="text" class="form-control bg-light mb-3"
-									placeholder="Name">
-							</div>
-							<div class="col-lg-6" data-aos="fade-right"
-								data-aos-duration="1000">
-								<input type="text" class="form-control bg-light mb-3"
-									placeholder="Email">
-							</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-9 mx-auto">
+				<form action="">
+					<div class="row">
+						<div class="col-lg-6" data-aos="fade-left"
+							data-aos-duration="1000">
+							<input type="text" class="form-control bg-light mb-3"
+								placeholder="Name">
 						</div>
-						<div class="form-row">
-							<div class="col-lg-12" data-aos="fade-up"
-								data-aos-duration="1000">
-								<textarea name="" id="" class="form-control bg-light"
-									placeholder="Massage" cols="30" rows="10"></textarea>
-							</div>
+						<div class="col-lg-6" data-aos="fade-right"
+							data-aos-duration="1000">
+							<input type="text" class="form-control bg-light mb-3"
+								placeholder="Email">
 						</div>
-						<button class="btn3 my-4">Submit</button>
-					</form>
-				</div>
+					</div>
+					<div class="form-row">
+						<div class="col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+							<textarea name="" id="" class="form-control bg-light"
+								placeholder="Massage" cols="30" rows="10"></textarea>
+						</div>
+					</div>
+					<button class="btn3 my-4">Submit</button>
+				</form>
 			</div>
-		
+		</div>
+
 	</section>
 
 	<!--  fotter section  -->
@@ -178,7 +177,7 @@
 			})
 			.then((willDelete) => {
 			  if (willDelete) {
-				window.location="/user/delete/"+cid;
+				window.location="/admin/delete/"+cid;
 			  } else {
 			    swal("Your Post is safe!");
 			  }
