@@ -10,14 +10,13 @@
 	</parent>
 	<groupId>com.myblog</groupId>
 	<artifactId>MyBlog</artifactId>
-	
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<name>MyBlog</name>
-	<description>Personal profile</description>
+	<description>Learnign spring annotation</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -74,7 +73,7 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+		<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
